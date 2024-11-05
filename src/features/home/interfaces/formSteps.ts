@@ -5,7 +5,7 @@ export enum FormSteps {
     STEP_FOUR = 'STEP_4',
     STEP_FIVE = 'STEP_5',
     STEP_SIX = 'STEP_6',
-};
+}
 
 export interface FormComponentProps {
     handleStepData: (key: FormSteps, data: string) => void;
