@@ -6,7 +6,7 @@ interface FormState {
     nextQuestion: () => void;
     previousQuestion: () => void;
     setAnswer: (questionId: number, answer: string) => void;
-    submitForm: () => void;  // Nueva función para el envío de datos
+    submitForm: () => void;
 }
 
 export const useFormStore = create<FormState>((set, get) => ({
@@ -28,6 +28,5 @@ export const useFormStore = create<FormState>((set, get) => ({
     submitForm: () => {
         const answers = get().answers;
         console.log("Formulario completado. Respuestas:", answers);
-        // Aquí podrías integrar una llamada a una API para enviar los datos
     },
 }));
