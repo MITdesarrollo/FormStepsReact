@@ -1,23 +1,21 @@
 import React, {useEffect} from 'react';
-import {Test} from "./features/home/ui/organisms/Test.tsx";
 
+import {FormSteps} from "./features/home/interfaces/formSteps.ts";
+import {FirstStepComponent} from "./features/home/ui/organisms/FirstStepComponent.tsx";
+import {SecondStepComponent} from "./features/home/ui/organisms/SecondStepComponent.tsx";
+import {ThirdStepComponent} from "./features/home/ui/organisms/ThirdStepComponent.tsx";
+import {FourthStepComponent} from "./features/home/ui/organisms/FourthStepComponent.tsx";
+import {FifthStepComponent} from "./features/home/ui/organisms/FifthStepComponent.tsx";
+import {SixthStepComponent} from "./features/home/ui/organisms/SixthStepComponent.tsx";
 
-export enum FormSteps {
-    STEP_ONE = 'STEP_1',
-    STEP_TWO = 'STEP_2',
-    STEP_THREE = 'STEP_3',
-    STEP_FOUR = 'STEP_4',
-    STEP_FIVE = 'STEP_5',
-    STEP_SIX = 'STEP_6',
-};
 
 const mappedComponent = {
-    [FormSteps.STEP_ONE]: Test,
-    [FormSteps.STEP_TWO]: Test,
-    [FormSteps.STEP_THREE]: Test,
-    [FormSteps.STEP_FOUR]: Test,
-    [FormSteps.STEP_FIVE]: Test,
-    [FormSteps.STEP_SIX]: Test,
+    [FormSteps.STEP_ONE]: FirstStepComponent,
+    [FormSteps.STEP_TWO]: SecondStepComponent,
+    [FormSteps.STEP_THREE]: ThirdStepComponent,
+    [FormSteps.STEP_FOUR]: FourthStepComponent,
+    [FormSteps.STEP_FIVE]: FifthStepComponent,
+    [FormSteps.STEP_SIX]: SixthStepComponent,
 };
 
 const App: React.FC = () => {
@@ -47,7 +45,7 @@ const App: React.FC = () => {
 
 
     return (
-        <CurrentComponent handleStepData={handleStepData} handleSetStep={handleSetFormStep} currentStep={formSteps}/>
+        <CurrentComponent  handleStepData={handleStepData} handleSetStep={handleSetFormStep} currentStep={formSteps} stepData={stepData}/>
     );
 };
 
