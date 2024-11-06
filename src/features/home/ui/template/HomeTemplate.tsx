@@ -53,7 +53,7 @@ export const HomeTemplate: React.FC = () => {
                     <div className={styles.containerPersonSteps}>
                         <p className={styles.stepsNumber}>
                             <span className={styles.currentStep}>{formSteps}</span>
-                            <img
+                            <img loading={"lazy"}
                                 src={Line} alt="Line" className={styles.line}/>
                             <span className={styles.totalStep}>06</span>
                         </p>

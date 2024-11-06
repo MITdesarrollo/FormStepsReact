@@ -1,20 +1,20 @@
 .buttonGroupContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
 }
 
 .optionButton {
-    display: flex;
+    min-height: 39px;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    justify-content: start;
-    gap: 1rem;
     padding: 5px;
     border: 1px solid var(--main-color);
     border-radius: 20px;
     background: none;
     cursor: pointer;
-    font-family: "sf pro medium";
+    font-family: "sf pro medium", sans-serif;
     font-size: 11px;
     width: 100%;
     text-align: center;
@@ -27,9 +27,9 @@
     align-items: center;
     color: white;
     width: 50px;
-    height: 50px;
+    height: 30px;
     border-radius: 15px;
-    font-family: "sf pro medium";
+    font-family: "sf pro medium", sans-serif;
     text-align: center;
 }
 
@@ -38,18 +38,20 @@
     color: white;
 }
 
-.buttonGroupContainer .optionButton:last-child:nth-child(odd) {
-    grid-column: span 2;
+.text {
+    padding: 0 .3em;
 }
 
 @media (min-width: 992px) {
     .buttonGroupContainer {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
     .buttonGroupContainer .optionButton:last-child:nth-child(odd) {
         grid-column: span 1;
     }
+
     .optionButton{
         gap: 10px;
     }
@@ -60,4 +62,8 @@
         border-radius: 50%;
         padding: 0;
     }
+}
+
+@media (min-width: 1200px) {
+
 }
