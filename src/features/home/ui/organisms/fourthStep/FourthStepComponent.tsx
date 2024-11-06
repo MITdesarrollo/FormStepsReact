@@ -1,11 +1,11 @@
-import {FormComponentProps, FormStep} from "../../../interfaces/formStep.ts";
-import {fourthStepInfo} from "../../../constants/fourthStepInfo.ts";
-import {ButtonPrev} from "../../atoms/buttonPrev/ButtonPrev.tsx";
-import {ButtonNext} from "../../atoms/buttonNext/ButtonNext.tsx";
-import {OptionsButtonsGrid} from "../../atoms/optionsButtonsGrid/OptionsButtonsGrid.tsx";
+import { FormComponentProps, FormStep } from "../../../interfaces/formStep.ts";
+import { fourthStepInfo } from "../../../constants/fourthStepInfo.ts";
+import { ButtonPrev } from "../../atoms/buttonPrev/ButtonPrev.tsx";
+import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
+import { OptionsButtonsGrid } from "../../atoms/optionsButtonsGrid/OptionsButtonsGrid.tsx";
 import styles from "./fourth.module.css";
 
-export const FourthStepComponent = ({ handleStepData, handleSetStep, currentStep , stepData}: FormComponentProps )=> {
+export const FourthStepComponent = ({ handleStepData, handleSetStep, currentStep , stepData }: FormComponentProps )=> {
     return (
         <section className={styles.containerStep}>
             <div className={styles.containerText}>

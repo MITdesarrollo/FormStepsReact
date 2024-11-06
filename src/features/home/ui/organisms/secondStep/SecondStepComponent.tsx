@@ -1,12 +1,12 @@
-import {FormComponentProps, FormStep} from "../../../interfaces/formStep.ts";
-import {secondStepInfo} from "../../../constants/secondStepInfo.ts";
-import {OptionsButtonsGrid} from "../../atoms/optionsButtonsGrid/OptionsButtonsGrid.tsx";
-import {ButtonPrev} from "../../atoms/buttonPrev/ButtonPrev.tsx";
-import {ButtonNext} from "../../atoms/buttonNext/ButtonNext.tsx";
+import { FormComponentProps, FormStep } from "../../../interfaces/formStep.ts";
+import { secondStepInfo } from "../../../constants/secondStepInfo.ts";
+import { OptionsButtonsGrid } from "../../atoms/optionsButtonsGrid/OptionsButtonsGrid.tsx";
+import { ButtonPrev } from "../../atoms/buttonPrev/ButtonPrev.tsx";
+import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
 import styles from "./secondStep.module.css";
 
 
-export const SecondStepComponent = ({handleStepData, handleSetStep, currentStep, stepData}: FormComponentProps) => {
+export const SecondStepComponent = ({ handleStepData, handleSetStep, currentStep, stepData }: FormComponentProps) => {
 
     return (
         <section  className={styles.containerStep}>
