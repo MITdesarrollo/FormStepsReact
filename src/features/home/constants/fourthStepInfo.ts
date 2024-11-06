@@ -1,6 +1,7 @@
 export const fourthStepInfo = {
     id: 1,
     question: '¿Qué CRM están utilizando en tu empresa?',
+    subtitle: 'CRM:',
     type: 'options',
     options: [
         'SAP',

@@ -8,7 +8,10 @@ import styles from "./fourth.module.css";
 export const FourthStepComponent = ({ handleStepData, handleSetStep, currentStep , stepData}: FormComponentProps )=> {
     return (
         <section className={styles.containerStep}>
-            <p>{fourthStepInfo.question}</p>
+            <div className={styles.containerText}>
+                <p>{fourthStepInfo.question}</p>
+                <p className={styles.subtitle}>{fourthStepInfo.subtitle}</p>
+            </div>
             <OptionsButtonsGrid options={fourthStepInfo.options} handleStepData={handleStepData} currentStep={currentStep} stepData={stepData}/>
             <div className={styles.containerButtons}>
                 <ButtonPrev handleSetStep={() => handleSetStep(FormStep.STEP_THREE)}/>

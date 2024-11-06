@@ -13,12 +13,18 @@
   outline: none;
   background: transparent;
   margin-bottom: 1.5rem;
-
 }
 .inputText::placeholder {
   color: #23133180;
   font-size: 16px;
   font-family: 'sf pro ligth';
 }
-
-
+.containerText{
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.textBold{
+  font-weight: bold;
+}

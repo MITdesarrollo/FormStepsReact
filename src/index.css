@@ -9,7 +9,9 @@ body {
   font-family: 'K2D', sans-serif;
   background: var(--bg-color);
 }
-
+p{
+  margin: 0;
+}
 
 @font-face {
   font-family: 'sf pro ligth';
