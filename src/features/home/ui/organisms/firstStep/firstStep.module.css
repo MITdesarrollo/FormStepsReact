@@ -1,4 +1,7 @@
 .containerStep{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   font-size: 18px;
   color: var(--main-color);
   line-height: 23.5px;
@@ -20,7 +23,6 @@
   font-family: 'sf pro ligth';
 }
 .containerText{
-  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;

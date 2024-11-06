@@ -11,7 +11,10 @@ import styles from "./fifthStep.module.css";
 export const FifthStepComponent = ({ handleStepData, handleSetStep, currentStep, stepData }: FormComponentProps )=> {
     return (
         <section className={styles.containerStep}>
-            <p>{fifthStepInfo.question}</p>
+            <div className={styles.containerText}>
+                <h2>{fifthStepInfo.title}</h2>
+                <p>{fifthStepInfo.question}</p>
+            </div>
             <OptionsButtonsGrid options={fifthStepInfo.options} handleStepData={handleStepData} currentStep={currentStep} stepData={stepData}/>
             <div className={styles.containerButtons}>
                 <ButtonPrev handleSetStep={() => handleSetStep(FormStep.STEP_FOUR)}/>
