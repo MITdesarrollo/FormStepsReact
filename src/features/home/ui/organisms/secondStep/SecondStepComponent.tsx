@@ -10,7 +10,7 @@ export const SecondStepComponent = ({ handleStepData, handleSetStep, currentStep
 
     return (
         <section  className={styles.containerStep}>
-            <div>
+            <div className={styles.containerText}>
                 <p>
                     <b className={styles.textBold}>{`Genial ${stepData[FormStep.STEP_ONE]},`}</b> ahora nos gustaría
                     tener cierta info para diseñar una
