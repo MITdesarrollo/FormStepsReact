@@ -1,0 +1,31 @@
+.button{
+    height: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: var(--main-color);
+    font-family: "sf pro medium";
+    color: white;
+    font-size: 11px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button img {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    visibility: hidden;
+}
+
+.button:hover img {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 992px){
+    .button{
+        width: 140px;
+    }
+}

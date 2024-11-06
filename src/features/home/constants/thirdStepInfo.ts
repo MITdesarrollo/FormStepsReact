@@ -11,5 +11,6 @@ export const thirdStepInfo = {
         'Optimizar procesos comerciales',
         'Optimizar procesos operativos',
         'Otro'
-    ]
+    ],
+
 }

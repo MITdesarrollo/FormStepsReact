@@ -1,0 +1,24 @@
+.containerStep{
+  font-size: 18px;
+  color: var(--main-color);
+  line-height: 23.5px;
+  font-weight: 300;
+  max-width: 400px;
+}
+.inputText{
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  height: 30px;
+  width: 100%;
+  outline: none;
+  background: transparent;
+  margin-bottom: 1.5rem;
+
+}
+.inputText::placeholder {
+  color: #23133180;
+  font-size: 16px;
+  font-family: 'sf pro ligth';
+}
+
+

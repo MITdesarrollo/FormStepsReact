@@ -13,7 +13,6 @@ export const fifthStepInfo = {
         'Consumo Masivo',
         'Mayorista',
         'Retail',
-        'Software',
-        'Financiera'
+        'Otra',
     ]
 }

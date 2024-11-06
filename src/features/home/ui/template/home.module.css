@@ -10,23 +10,52 @@
  height: 100%;
  display: flex;
  justify-content: end;
+ background: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
+ border-radius: 200px 0 0 200px;
+}
+.containerPersonSteps{
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
  align-items: end;
  margin-left: 1rem;
- background: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
- border-radius: 200px 0px 0px 200px;
+}
+.stepsNumber{
+ margin: inherit;
+ padding-right: 1rem;
+ display: flex;
+ align-items: start;
+ font-family: "sf pro ligth";
+}
+.line{
+ padding: 0 5px;
+}
+.totalStep{
+ font-family: 'sf pro medium';
+ font-size: 10px;
+}
+.currentStep{
+ font-size: 21px;
+ font-family: 'sf pro medium';
 }
 .logoBanner{
- position: absolute;
  height: 30px;
- top: 20%;
- left: 15%;
  width: auto;
  margin: auto;
 }
+.logoBannerDesk{
+ display: none;
+}
 .imageBanner{
  margin-right: 2rem;
- height: 90%;
+ height: 80%;
  width: auto;
+}
+.form{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 2rem ;
 }
 
 @media (min-width: 400px){
@@ -34,6 +63,7 @@
   height: 250px;
  }
  .logoBanner{
+  top: 20%;
   height: 50px;
  }
 }
@@ -41,8 +71,11 @@
  .containerBanner{
   height: 300px;
  }
- .logoBanner{
-  height: 70px;
+ .imageBanner{
+  margin-right: 3rem;
+ }
+ .form{
+  padding: 2rem 4rem;
  }
 }
 
@@ -59,22 +92,31 @@
  .containerForm{
   height: 100vh;
   flex-direction: row-reverse;
+  gap: 5rem;
  }
  .form{
-  width: 50%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0;
  }
  .containerBanner{
   height: 100%;
   width: 50%;
  }
- .imageBanner{
-  height: 450px;
+ .logoBanner{
+  display: none;
  }
-}
+ .logoBannerDesk{
+  display: flex;
+  height: 41.18px;
+  width: auto;
 
-@media (min-width: 1024px){
+ }
  .imageBanner{
-  height: 500px;
+  height: 400px;
+  margin-right: 3rem;
  }
 }
 

@@ -8,9 +8,9 @@ export const fourthStepInfo = {
         'Salesforce',
         'Hubspot',
         'Zoho',
-        'Freshsales (Freshdesk)',
+        'Netsuite (Oracle)',
         'Monday',
-        'Otro',
+        'CRM Propio',
         'No tengo CRM'
     ]
 }

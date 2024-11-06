@@ -1,10 +1,10 @@
 export enum FormStep {
-    STEP_ONE = 'STEP_1',
-    STEP_TWO = 'STEP_2',
-    STEP_THREE = 'STEP_3',
-    STEP_FOUR = 'STEP_4',
-    STEP_FIVE = 'STEP_5',
-    STEP_SIX = 'STEP_6',
+    STEP_ONE = '01',
+    STEP_TWO = '02',
+    STEP_THREE = '03',
+    STEP_FOUR = '04',
+    STEP_FIVE = '05',
+    STEP_SIX = '06',
 }
 
 export interface FormComponentProps {

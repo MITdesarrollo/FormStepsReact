@@ -1,0 +1,41 @@
+
+.buttonGroupContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+
+.optionButton {
+    padding: 8px 16px;
+    display: block;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    font-family: "sf pro medium";
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+}
+
+
+.selected {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+.buttonGroupContainer .optionButton:last-child:nth-child(odd) {
+    grid-column: span 2;
+}
+
+@media (min-width: 992px){
+    .buttonGroupContainer {
+        grid-template-columns: repeat(3, 1fr)!important;
+    }
+    .buttonGroupContainer .optionButton:last-child:nth-child(odd) {
+        grid-column: span 1;
+    }
+}

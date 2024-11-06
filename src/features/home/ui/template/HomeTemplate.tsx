@@ -1,7 +1,8 @@
 import React from 'react';
 import {FormStep} from "../../interfaces/formStep.ts";
-import PersonBanner from "../../../../assets/persona-banner.png";
+import PersonBanner from "../../../../assets/persona-banner.svg";
 import Logo from "../../../../assets/Group 171.png";
+import Line from "../../../../assets/line.png";
 import styles from "./home.module.css";
 
 import {
@@ -46,15 +47,26 @@ export const HomeTemplate: React.FC = () => {
 
     return (
         <main className={styles.containerForm}>
-            <img className={styles.logoBanner} src={Logo} alt="Logo customer scoop"/>
             <section className={styles.containerBanner}>
                 <div className={styles.figureBanner}>
-                    <img className={styles.imageBanner} src={PersonBanner}
-                         alt="Hombre sonriendo mientras mira su teléfono"/>
+                    <img className={styles.logoBanner} src={Logo} alt="Logo customer scoop"/>
+                    <div className={styles.containerPersonSteps}>
+                        <p className={styles.stepsNumber}>
+                            <span className={styles.currentStep}>{formSteps}</span>
+                            <img
+                                src={Line} alt="Line" className={styles.line}/>
+                            <span className={styles.totalStep}>06</span>
+                        </p>
+                        <img className={styles.imageBanner} src={PersonBanner}
+                             alt="Hombre sonriendo mientras mira su teléfono"/>
+                    </div>
+
                 </div>
             </section>
             <section className={styles.form}>
-                <CurrentComponent handleStepData={handleStepData} handleSetStep={handleSetFormStep} currentStep={formSteps}
+                <img className={styles.logoBannerDesk} src={Logo} alt="Logo customer scoop"/>
+                <CurrentComponent handleStepData={handleStepData} handleSetStep={handleSetFormStep}
+                                  currentStep={formSteps}
                                   stepData={stepData}/>
             </section>
 

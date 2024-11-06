@@ -1,8 +1,25 @@
-
+:root {
+  --main-color: #231331;
+  --bg-color: #F4F4F4;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'K2D', sans-serif;
+  background: var(--bg-color);
 }
 
+
+@font-face {
+  font-family: 'sf pro ligth';
+  src: url('assets/fonts/SFProDisplay-Ultralight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'sf pro medium';
+  src: url('assets/fonts/SFProDisplay-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'sf pro normal';
+  src: url('assets/fonts/SFProDisplay-Thin.ttf') format('truetype');
+}
