@@ -5,7 +5,7 @@ interface ButtonProps {
     text: string;
 }
 
-export const ButtonNext: React.FC<ButtonProps> = ({ handleSetStep , text}) => {
+export const ButtonNext: React.FC<ButtonProps> = ({ handleSetStep , text }) => {
     return (
         <button className={styles.button} onClick={handleSetStep}>{text} <img className={styles.arrow} src={Arrow} alt="flecha hacia la derecha"/></button>
     );

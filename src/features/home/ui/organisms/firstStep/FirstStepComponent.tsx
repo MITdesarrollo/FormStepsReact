@@ -1,6 +1,6 @@
 import { FormComponentProps, FormStep } from "../../../interfaces/formStep.ts";
-import {firstStepInfo} from "../../../constants/firstStepInfo.ts";
-import {ButtonNext} from "../../atoms/buttonNext/ButtonNext.tsx";
+import { firstStepInfo } from "../../../constants/firstStepInfo.ts";
+import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
 import styles from "./firstStep.module.css";
 
 export const FirstStepComponent = ({ handleStepData, handleSetStep }: FormComponentProps) => {

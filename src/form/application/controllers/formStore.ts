@@ -9,7 +9,7 @@ interface FormState {
     submitForm: () => void;
 }
 
-export const useFormStore = create<FormState>((set, get) => ({
+export const useFormStore = create<FormState>((set) => ({
     currentQuestion: 0,
     answers: {},
 
@@ -26,7 +26,5 @@ export const useFormStore = create<FormState>((set, get) => ({
     })),
 
     submitForm: () => {
-        const answers = get().answers;
-        console.log("Formulario completado. Respuestas:", answers);
     },
 }));

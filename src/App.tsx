@@ -1,5 +1,5 @@
 import React from 'react';
-import {HomeTemplate} from "./features/home/ui/template/HomeTemplate.tsx";
+import { HomeTemplate } from "./features/home/ui/template/HomeTemplate.tsx";
 
 
 

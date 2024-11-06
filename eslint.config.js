@@ -23,6 +23,15 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+        "max-len": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "no-console": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "react/display-name": "off",
+        "react/no-unescaped-entities": "off",
+        'object-curly-spacing': ['error', 'always'],
+
     },
   },
 )

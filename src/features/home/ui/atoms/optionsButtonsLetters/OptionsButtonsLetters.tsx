@@ -1,4 +1,4 @@
-import {FormStep} from "../../../interfaces/formStep.ts";
+import { FormStep } from "../../../interfaces/formStep.ts";
 import React from "react";
 import styles from "./optionsButtonsLetters.module.css";
 
@@ -10,7 +10,7 @@ interface OptionButtonProps {
     stepData: Record<FormStep, string>;
 }
 
-export const OptionsButtonsLetters : React.FC<OptionButtonProps> = ({ options, stepData, handleStepData, currentStep}) => {
+export const OptionsButtonsLetters : React.FC<OptionButtonProps> = ({ options, stepData, handleStepData, currentStep }) => {
         return (
             <div className={styles.buttonGroupContainer}>
                 {options.map((option, index) => (

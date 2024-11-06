@@ -1,6 +1,6 @@
-import {FormComponentProps, FormStep} from "../../../interfaces/formStep.ts";
-import {sixthStepInfo} from "../../../constants/sixthStepInfo.ts";
-import {ButtonNext} from "../../atoms/buttonNext/ButtonNext.tsx";
+import { FormComponentProps, FormStep } from "../../../interfaces/formStep.ts";
+import { sixthStepInfo } from "../../../constants/sixthStepInfo.ts";
+import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
 import styles from "./sixthStep.module.css";
 
 

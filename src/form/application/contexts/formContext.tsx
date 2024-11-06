@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useState, ReactNode } from 'react';
 
 
 interface FormState {
@@ -12,9 +12,7 @@ interface FormState {
     submitForm: () => void;
 }
 
-
 const FormContext = createContext<FormState | undefined>(undefined);
-
 
 export const FormProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -39,7 +37,6 @@ export const FormProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     };
 
     const submitForm = () => {
-        console.log("Formulario completado. Respuestas:", answers, "Nombre del usuario:", userName);
 
     };
 
@@ -50,11 +47,3 @@ export const FormProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 );
 };
 
-
-export const useFormContext = () => {
-    const context = useContext(FormContext);
-    if (!context) {
-        throw new Error("useFormContext debe usarse dentro de FormProvider");
-    }
-    return context;
-};

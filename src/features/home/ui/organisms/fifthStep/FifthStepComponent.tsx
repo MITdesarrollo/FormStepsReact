@@ -1,8 +1,8 @@
-import {FormComponentProps, FormStep} from "../../../interfaces/formStep.ts";
-import {fifthStepInfo} from "../../../constants/fifthStepInfo.ts";
-import {OptionsButtonsGrid} from "../../atoms/optionsButtonsGrid/OptionsButtonsGrid.tsx";
-import {ButtonPrev} from "../../atoms/buttonPrev/ButtonPrev.tsx";
-import {ButtonNext} from "../../atoms/buttonNext/ButtonNext.tsx";
+import { FormComponentProps, FormStep } from "../../../interfaces/formStep.ts";
+import { fifthStepInfo } from "../../../constants/fifthStepInfo.ts";
+import { OptionsButtonsGrid } from "../../atoms/optionsButtonsGrid/OptionsButtonsGrid.tsx";
+import { ButtonPrev } from "../../atoms/buttonPrev/ButtonPrev.tsx";
+import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
 import styles from "./fifthStep.module.css";
 
 
