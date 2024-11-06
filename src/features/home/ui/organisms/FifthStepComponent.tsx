@@ -1,18 +1,21 @@
-import {FormComponentProps, FormSteps} from "../../interfaces/formSteps.ts";
-import questionsData from "../../constants/questions.ts";
-import {Button} from "../atoms/Button.tsx";
+import {FormComponentProps, FormStep} from "../../interfaces/formStep.ts";
+import {fifthStepInfo} from "../../constants/fifthStepInfo.ts";
+import IconBack from "../../../../assets/button-back.png";
+import {OptionButtonGroup} from "../atoms/OptionButtonGroup.tsx";
+import {ButtonPrev} from "../atoms/ButtonPrev.tsx";
+import {ButtonNext} from "../atoms/ButtonNext.tsx";
 
 
 
 
-export const FifthStepComponent = ({ handleStepData, handleSetStep, currentStep }: FormComponentProps )=> {
+export const FifthStepComponent = ({ handleStepData, handleSetStep, currentStep, stepData }: FormComponentProps )=> {
     return (
         <section>
             <p>Estoy en el step: {currentStep}</p>
-            <p>{questionsData[5].text}</p>
-            <input onChange={(e) => handleStepData(FormSteps.STEP_FIVE, e.target.value)} type="text"/>
-            <Button handleSetStep={() => handleSetStep(FormSteps.STEP_FOUR)} />
-            <Button handleSetStep={() => handleSetStep(FormSteps.STEP_SIX)} />
+            <p>{fifthStepInfo.question}</p>
+            <OptionButtonGroup options={fifthStepInfo.options} handleStepData={handleStepData} currentStep={currentStep} stepData={stepData}/>
+            <ButtonPrev handleSetStep={() => handleSetStep(FormStep.STEP_FOUR)} img={IconBack}/>
+            <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_SIX)} text={"Siguiente"}/>
         </section>
     );
 };

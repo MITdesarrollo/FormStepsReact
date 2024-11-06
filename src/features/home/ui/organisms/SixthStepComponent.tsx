@@ -1,17 +1,22 @@
-import {FormComponentProps, FormSteps} from "../../interfaces/formSteps.ts";
-import {Button} from "../atoms/Button.tsx";
+import {FormComponentProps, FormStep} from "../../interfaces/formStep.ts";
+import {sixthStepInfo} from "../../constants/sixthStepInfo.ts";
+import {ButtonPrev} from "../atoms/ButtonPrev.tsx";
+import {ButtonNext} from "../atoms/ButtonNext.tsx";
+import IconBack from "../../../../assets/button-back.png";
 
 
 
 
-export const SixthStepComponent = ({ handleStepData, handleSetStep, currentStep }: FormComponentProps )=> {
+
+export const SixthStepComponent = ({ handleSetStep, currentStep  }: FormComponentProps )=> {
     return (
         <section>
-            <h1>Ingrese su nombre</h1>
-            <h2>Estoy en el step: {currentStep}</h2>
-            <input onChange={(e) => handleStepData(FormSteps.STEP_SIX, e.target.value)} type="text"/>
-            <Button handleSetStep={() => handleSetStep(FormSteps.STEP_FIVE)} />
-            <button>finalizar</button>
+            <p>Estoy en el step: {currentStep}</p>
+            <h2><span>{sixthStepInfo.firstPartTitle}</span> {sixthStepInfo.secondPartTitle}</h2>
+            <p>{sixthStepInfo.subtitle}</p>
+
+            <ButtonPrev handleSetStep={() => handleSetStep(FormStep.STEP_FIVE)} img={IconBack}/>
+            <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_ONE)} text={"Finalizar"} />
         </section>
     );
 };

@@ -1,21 +1,18 @@
-import { FormComponentProps, FormSteps } from "../../interfaces/formSteps.ts";
-import questionsData from "../../constants/questions.ts";
-import { Button } from "../atoms/Button.tsx";
+import { FormComponentProps, FormStep } from "../../interfaces/formStep.ts";
+import {firstStepInfo} from "../../constants/firstStepInfo.ts";
+import {ButtonNext} from "../atoms/ButtonNext.tsx";
 
 export const FirstStepComponent = ({ handleStepData, handleSetStep, currentStep }: FormComponentProps) => {
     return (
         <section>
             <p>Estoy en el step: {currentStep}</p>
-            <p>
-                Muchas gracias por tu interés en conocer customerScoops, que a través de Formularios Conversacionales
-                Inteligentes te ayudamos a aumentar el revenue y rentabilidad de tu negocio.
-            </p>
-            <p>{questionsData[0].text}</p>
+            <p>{firstStepInfo.text}</p>
+            <p>{firstStepInfo.question}</p>
             <input
-                onChange={(e) => handleStepData(FormSteps.STEP_ONE, e.target.value)}
-                type="text"
+                onChange={(e) => handleStepData(FormStep.STEP_ONE, e.target.value)}
+                type={firstStepInfo.type}
             />
-            <Button handleSetStep={() => handleSetStep(FormSteps.STEP_TWO)} />
+            <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_TWO)} text={"Siguiente"}/>
         </section>
     );
 };

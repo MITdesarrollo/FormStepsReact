@@ -1,0 +1,97 @@
+.containerForm{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.containerBanner{
+ height: 213px;
+}
+.figureBanner{
+ height: 100%;
+ display: flex;
+ justify-content: end;
+ align-items: end;
+ margin-left: 1rem;
+ background: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
+ border-radius: 200px 0px 0px 200px;
+}
+.logoBanner{
+ position: absolute;
+ height: 30px;
+ top: 20%;
+ left: 15%;
+ width: auto;
+ margin: auto;
+}
+.imageBanner{
+ margin-right: 2rem;
+ height: 90%;
+ width: auto;
+}
+
+@media (min-width: 400px){
+ .containerBanner{
+  height: 250px;
+ }
+ .logoBanner{
+  height: 50px;
+ }
+}
+@media (min-width: 600px){
+ .containerBanner{
+  height: 300px;
+ }
+ .logoBanner{
+  height: 70px;
+ }
+}
+
+@media (min-width: 768px){
+ .containerBanner{
+  height: 350px;
+ }
+ .logoBanner{
+  height: 80px;
+ }
+}
+
+@media (min-width: 992px){
+ .containerForm{
+  height: 100vh;
+  flex-direction: row-reverse;
+ }
+ .form{
+  width: 50%;
+ }
+ .containerBanner{
+  height: 100%;
+  width: 50%;
+ }
+ .imageBanner{
+  height: 450px;
+ }
+}
+
+@media (min-width: 1024px){
+ .imageBanner{
+  height: 500px;
+ }
+}
+
+@media (min-width: 1280px){
+ .imageBanner{
+  height: 567px;
+ }
+}
+
+@media (min-width: 1440px){
+ .imageBanner{
+  height: 620px;
+ }
+}
+
+@media (min-width: 1770px){
+ .imageBanner{
+  height: 750px;
+ }
+}
