@@ -11,3 +11,6 @@
     display: flex;
     align-items: center;
 }
+.textBold{
+    font-weight: bold;
+}

@@ -10,11 +10,14 @@ export const SecondStepComponent = ({handleStepData, handleSetStep, currentStep,
 
     return (
         <section  className={styles.containerStep}>
-            <p>
-                <b>{`Genial ${stepData[FormStep.STEP_ONE]},`}</b> ahora nos gustaría tener cierta info para diseñar una
-                gran propuesta de valor para ti:
-            </p>
-            <p>{secondStepInfo.question}</p>
+            <div>
+                <p>
+                    <b className={styles.textBold}>{`Genial ${stepData[FormStep.STEP_ONE]},`}</b> ahora nos gustaría
+                    tener cierta info para diseñar una
+                    gran propuesta de valor para ti:
+                </p>
+                <p>{secondStepInfo.question}</p>
+            </div>
             <OptionsButtonsGrid
                 options={secondStepInfo.options}
                 handleStepData={handleStepData}
