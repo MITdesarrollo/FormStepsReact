@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import {template} from "./template/template.js";
 
 const API_KEY = 're_RR8eRYXm_52GbqhnYUTVAtYk6NrZXRwkA';
 const resend = new Resend(API_KEY);
@@ -13,7 +14,7 @@ async function sendEmail() {
             from: FROM_EMAIL,
             to: TO_EMAIL,
             subject: 'Customer Scoops',
-            html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
+            html: template,
         });
 
         console.log('Email sent successfully:', response);
