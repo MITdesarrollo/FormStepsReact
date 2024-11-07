@@ -7,4 +7,15 @@
     line-height: 23px;
     font-weight: 300;
     max-width: 400px;
+    animation: fadeIn 400ms ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
 }
