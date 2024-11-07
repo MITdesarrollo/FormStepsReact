@@ -3,10 +3,11 @@ import Arrow from '../../../../../assets/arrow.png';
 interface ButtonProps {
     handleSetStep: () => void;
     text: string;
+    isNextStepDisable: () => boolean;
 }
 
-export const ButtonNext: React.FC<ButtonProps> = ({ handleSetStep , text }) => {
+export const ButtonNext = ({ handleSetStep , text,isNextStepDisable }: ButtonProps) => {
     return (
-        <button className={styles.button} onClick={handleSetStep}>{text} <img className={styles.arrow} src={Arrow} alt="flecha hacia la derecha"/></button>
+        <button disabled={isNextStepDisable()} className={`${isNextStepDisable() && styles.disable} ${styles.button} `} onClick={handleSetStep}>{text} <img className={styles.arrow} src={Arrow} alt="flecha hacia la derecha"/></button>
     );
 };

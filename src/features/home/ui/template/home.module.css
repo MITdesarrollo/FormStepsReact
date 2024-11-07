@@ -40,18 +40,18 @@
  padding-right: 1rem;
  display: flex;
  align-items: start;
- font-family: "sf pro ligth";
+ font-family: "sf pro ligth", sans-serif;
 }
 .line{
  padding: 0 5px;
 }
 .totalStep{
- font-family: 'sf pro medium';
+ font-family: 'sf pro medium', sans-serif;
  font-size: 10px;
 }
 .currentStep{
  font-size: 21px;
- font-family: 'sf pro medium';
+ font-family: 'sf pro medium', sans-serif;
 }
 .logoBanner{
  height: 30px;
@@ -64,6 +64,7 @@
 .imageBanner{
  margin-right: 2rem;
  height: 80%;
+ object-fit: cover;
  width: auto;
 }
 .form{
@@ -131,20 +132,21 @@
 
  }
  .imageBanner{
-  height: 400px;
+  height: auto;
+  max-height: 410px;
   margin-right: 3rem;
  }
 }
 
 @media (min-width: 1280px){
  .imageBanner{
-  height: 567px;
+  max-height: 567px;
  }
 }
 
 @media (min-width: 1440px){
  .imageBanner{
-  height: 620px;
+  max-height: 620px;
  }
 }
 
@@ -153,6 +155,6 @@
   gap: 15rem;
  }
  .imageBanner{
-  height: 750px;
+  max-height: 750px;
  }
 }

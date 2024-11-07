@@ -4,12 +4,13 @@ import { OptionsButtonsGrid } from "../../atoms/optionsButtonsGrid/OptionsButton
 import { ButtonPrev } from "../../atoms/buttonPrev/ButtonPrev.tsx";
 import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
 import styles from "./secondStep.module.css";
+import { StepContainer } from "../stepContainer/StepContainer.tsx";
 
 
-export const SecondStepComponent = ({ handleStepData, handleSetStep, currentStep, stepData }: FormComponentProps) => {
+export const SecondStepComponent = ({ handleStepData, handleSetStep, currentStep, stepData , isNextStepDisable }: FormComponentProps) => {
 
     return (
-        <section  className={styles.containerStep}>
+        <StepContainer>
             <div className={styles.containerText}>
                 <p>
                     <b className={styles.textBold}>{`Genial ${stepData[FormStep.STEP_ONE]},`}</b> ahora nos gustaría
@@ -26,8 +27,9 @@ export const SecondStepComponent = ({ handleStepData, handleSetStep, currentStep
             />
             <div className={styles.containerButtons}>
                 <ButtonPrev handleSetStep={() => handleSetStep(FormStep.STEP_ONE)}/>
-                <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_THREE)} text={"Siguiente"}/>
+                <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_THREE)} text={"Siguiente"}
+                            isNextStepDisable={isNextStepDisable}/>
             </div>
-        </section>
+        </StepContainer>
     );
 };

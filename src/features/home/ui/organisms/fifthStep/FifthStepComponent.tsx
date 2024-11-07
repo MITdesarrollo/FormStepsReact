@@ -4,13 +4,14 @@ import { OptionsButtonsGrid } from "../../atoms/optionsButtonsGrid/OptionsButton
 import { ButtonPrev } from "../../atoms/buttonPrev/ButtonPrev.tsx";
 import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
 import styles from "./fifthStep.module.css";
+import { StepContainer } from "../stepContainer/StepContainer.tsx";
 
 
 
 
-export const FifthStepComponent = ({ handleStepData, handleSetStep, currentStep, stepData }: FormComponentProps )=> {
+export const FifthStepComponent = ({ handleStepData, handleSetStep, currentStep, stepData, isNextStepDisable }: FormComponentProps )=> {
     return (
-        <section className={styles.containerStep}>
+        <StepContainer>
             <div className={styles.containerText}>
                 <h2>{fifthStepInfo.title}</h2>
                 <p>{fifthStepInfo.question}</p>
@@ -18,8 +19,8 @@ export const FifthStepComponent = ({ handleStepData, handleSetStep, currentStep,
             <OptionsButtonsGrid options={fifthStepInfo.options} handleStepData={handleStepData} currentStep={currentStep} stepData={stepData}/>
             <div className={styles.containerButtons}>
                 <ButtonPrev handleSetStep={() => handleSetStep(FormStep.STEP_FOUR)}/>
-                <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_SIX)} text={"Siguiente"}/>
+                <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_SIX)} text={"Siguiente"} isNextStepDisable={isNextStepDisable}/>
             </div>
-        </section>
+        </StepContainer>
     );
 };

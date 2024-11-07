@@ -4,7 +4,7 @@ interface ButtonProps {
     handleSetStep: () => void;
 }
 
-export const ButtonPrev: React.FC<ButtonProps> = ({ handleSetStep }) => {
+export const ButtonPrev = ({ handleSetStep }: ButtonProps) => {
     return (
         <button className={styles.buttonPrev} onClick={handleSetStep}><img src={IconBack} alt="Flecha hacia la izquierda"/></button>
     );

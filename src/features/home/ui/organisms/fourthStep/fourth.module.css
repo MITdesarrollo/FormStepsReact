@@ -1,12 +1,5 @@
-.containerStep{
-    font-size: 18px;
-    color: var(--main-color);
-    line-height: 23.5px;
-    font-weight: 300;
-    max-width: 400px;
-}
+
 .containerButtons{
-    padding-top: 1.5rem;
     display: flex;
     align-items: center;
 }

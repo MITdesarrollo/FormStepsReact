@@ -1,6 +1,7 @@
 :root {
   --main-color: #231331;
   --bg-color: #F4F4F4;
+  --bg-disable: #C7C7C7;
 }
 body {
   margin: 0;
@@ -12,6 +13,8 @@ body {
 p{
   margin: 0;
 }
+
+
 
 @font-face {
   font-family: 'sf pro ligth';

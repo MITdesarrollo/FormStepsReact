@@ -2,12 +2,14 @@ import { FormComponentProps, FormStep } from "../../../interfaces/formStep.ts";
 import { firstStepInfo } from "../../../constants/firstStepInfo.ts";
 import { ButtonNext } from "../../atoms/buttonNext/ButtonNext.tsx";
 import styles from "./firstStep.module.css";
+import { StepContainer } from "../stepContainer/StepContainer.tsx";
 
-export const FirstStepComponent = ({ handleStepData, handleSetStep }: FormComponentProps) => {
+export const FirstStepComponent = ({ handleStepData, handleSetStep , isNextStepDisable }: FormComponentProps) => {
     return (
-        <section className={styles.containerStep}>
+        <StepContainer>
             <div className={styles.containerText}>
-                <p>{firstStepInfo.text} <b className={styles.textBold}>{firstStepInfo.highlightedText}</b> {firstStepInfo.afterText}</p>
+                <p>{firstStepInfo.text} <b
+                    className={styles.textBold}>{firstStepInfo.highlightedText}</b> {firstStepInfo.afterText}</p>
                 <p>{firstStepInfo.question}</p>
             </div>
             <input
@@ -17,8 +19,11 @@ export const FirstStepComponent = ({ handleStepData, handleSetStep }: FormCompon
                 type={firstStepInfo.type}
             />
             <div className={styles.containerButton}>
-                <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_TWO)} text={"Comenzar"}/>
+                <ButtonNext handleSetStep={() => handleSetStep(FormStep.STEP_TWO)} text={"Comenzar"}
+                            isNextStepDisable={isNextStepDisable}/>
             </div>
-        </section>
+        </StepContainer>
+
+
     );
 };

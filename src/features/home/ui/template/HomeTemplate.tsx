@@ -1,8 +1,6 @@
 import React from 'react';
 import { FormStep } from "../../interfaces/formStep.ts";
-import PersonBanner from "../../../../assets/persona-banner.svg";
 import Logo from "../../../../assets/Group 171.png";
-import Line from "../../../../assets/line.png";
 import styles from "./home.module.css";
 
 import {
@@ -12,6 +10,8 @@ import {
     SecondStepComponent, SixthStepComponent,
     ThirdStepComponent
 } from "../organisms";
+import { Banner } from "../molecules/Banner.tsx";
+import { ProgressionBar } from "../atoms/progressionBar/ProgressionBar.tsx";
 
 const mappedComponent = {
     [FormStep.STEP_ONE]: FirstStepComponent,
@@ -24,7 +24,7 @@ const mappedComponent = {
 
 
 export const HomeTemplate: React.FC = () => {
-    const [formSteps, setFormSteps] = React.useState<FormStep>(FormStep.STEP_ONE);
+    const [formStep, setFormStep] = React.useState<FormStep>(FormStep.STEP_ONE);
     const [stepData, setStepData] = React.useState<Record<FormStep, string>>({
         [FormStep.STEP_ONE]: '',
         [FormStep.STEP_TWO]: '',
@@ -39,39 +39,26 @@ export const HomeTemplate: React.FC = () => {
     };
 
     const handleSetFormStep = (step: FormStep) => {
-        setFormSteps(step);
+        setFormStep(step);
     };
+    const isNextStepDisable = () => {
+        return stepData[formStep] === "";
+    }
 
-    const CurrentComponent = mappedComponent[formSteps];
-
-    const stepNumber = parseInt(formSteps, 10);
-    const progressWidth = `${(100 / 6) * stepNumber}%`;
+    const CurrentStep = mappedComponent[formStep];
 
     return (
         <main className={styles.containerForm}>
-            <div className={styles.progressBarContainer}>
-                <div className={styles.progressBar} style={{ width: progressWidth }} />
-            </div>
-            <section className={styles.containerBanner}>
-                <div className={styles.figureBanner}>
-                    <img className={styles.logoBanner} src={Logo} alt="Logo customer scoop" />
-                    <div className={styles.containerPersonSteps}>
-                        <p className={styles.stepsNumber}>
-                            <span className={styles.currentStep}>{formSteps}</span>
-                            <img loading={"lazy"} src={Line} alt="Line" className={styles.line} />
-                            <span className={styles.totalStep}>06</span>
-                        </p>
-                        <img className={styles.imageBanner} src={PersonBanner} alt="Hombre sonriendo mientras mira su teléfono" />
-                    </div>
-                </div>
-            </section>
+            <ProgressionBar formStep={formStep}/>
+            <Banner formStep={formStep}/>
             <section className={styles.form}>
-                <img className={styles.logoBannerDesk} src={Logo} alt="Logo customer scoop" />
-                <CurrentComponent
+                <img className={styles.logoBannerDesk} src={Logo} alt="Logo customer scoop"/>
+                <CurrentStep
                     handleStepData={handleStepData}
                     handleSetStep={handleSetFormStep}
-                    currentStep={formSteps}
+                    currentStep={formStep}
                     stepData={stepData}
+                    isNextStepDisable={isNextStepDisable}
                 />
             </section>
         </main>

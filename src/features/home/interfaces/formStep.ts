@@ -12,4 +12,5 @@ export interface FormComponentProps {
     handleSetStep: (step: FormStep) => void;
     currentStep: FormStep;
     stepData: Record<FormStep, string>;
+    isNextStepDisable : () => boolean;
 }

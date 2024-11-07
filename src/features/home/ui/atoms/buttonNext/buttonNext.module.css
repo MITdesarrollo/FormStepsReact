@@ -6,7 +6,7 @@
     justify-content: center;
     gap: 5px;
     background: var(--main-color);
-    font-family: "sf pro medium";
+    font-family: "sf pro medium", sans-serif;
     color: white;
     font-size: 11px;
     padding: 10px 16px;
@@ -23,7 +23,9 @@
     opacity: 1;
     visibility: visible;
 }
-
+.disable{
+    background-color: var(--bg-disable);
+}
 @media (min-width: 992px){
     .button{
         width: 140px;

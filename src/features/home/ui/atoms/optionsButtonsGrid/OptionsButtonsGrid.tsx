@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FormStep } from "../../../interfaces/formStep.ts";
 import styles from "./optionsButtonsGid.module.css";
 
@@ -10,12 +10,12 @@ interface OptionButtonGroupProps {
     stepData: Record<FormStep, string>;
 }
 
-export const OptionsButtonsGrid: React.FC<OptionButtonGroupProps> = ({
+export const OptionsButtonsGrid = ({
                                                                         options,
                                                                         stepData,
                                                                         handleStepData,
                                                                         currentStep
-                                                                    }) => {
+                                                                    }: OptionButtonGroupProps) => {
     return (
         <div className={styles.buttonGroupContainer}>
             {options.map((option, index) => (
